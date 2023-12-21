@@ -49,6 +49,18 @@ function calcCisapride() {
   }
 }
 
+function calcGabapentin() {
+  convertPoundsToKg();
+  if (pounds) {
+    concentration.innerHTML = "Drug Concentration: Gabapentin 50mg/ml";
+    const mg = kg * 0.5; // kg * mg/kg = mg
+    const ml = (mg / 50).toFixed(2); //mg divided by 50mg/ml = ml
+    dosage.innerHTML = `Gabapentin Dosage: ${ml} mls, 2x per day`;
+  } else {
+    weight.innerHTML = `Please enter a weight`;
+  }
+}
+
 function convertPoundsToKg() {
   pounds = document.querySelector("input").value;
   kg = pounds * 0.45359237;
