@@ -1,27 +1,43 @@
 body {
-  background-color: rgb(191, 206, 255);
+  background-color: #bfceff;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  font-size: 25px;
-  padding: 10px;
+  align-items: center;
+  min-height: 100vh;
 }
 
 #info {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-#drug {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+label {
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
 }
 
 input {
-  font-size: 25px;
-  border-radius: 6px;
-  width: 50px;
-  background-color: rgb(238, 238, 252);
+  font-size: 22px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  width: 100px;
+  padding: 6px 10px;
+  text-align: center;
+  background-color: #eeeefc;
+  transition: all 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #5a6bff;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(90, 107, 255, 0.5);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -30,31 +46,112 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+#unitButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 button {
-  font-size: 20px;
-  background-color: rgb(225, 224, 252);
-  border-radius: 6px;
-  margin: 15px;
-  padding: 10px;
-  width: auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #e1e0fc;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-button:hover, active {
-  background-color: whitesmoke;
-  color: darkblue;
+button:hover {
+  background-color: #f5f5f5;
+  color: #1c1c6b;
+  border-color: #aaa;
 }
 
-button:focus {
-  background-color: whitesmoke;
-  color: darkblue;
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-button:active {
-  border: none;
+#drug {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
 }
 
 #result {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  background-color: #f0f3ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 50, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+#result > div {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #222;
+}
+
+#resetSection {
+  margin-top: 10px;
+}
+
+#resetBtn {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ffeded;
+  border: 2px solid #d9534f;
+  color: #d9534f;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(217, 83, 79, 0.6);
+  transition: all 0.3s ease;
+}
+
+#resetBtn:hover {
+  background-color: #fff5f5;
+  color: #a94442;
+  box-shadow: 0 0 12px rgba(217, 83, 79, 0.8);
+}
+
+.highlight-reset {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 8px rgba(217, 83, 79, 0.6);
+    transform: scale(1);
+  }
+  to {
+    box-shadow: 0 0 16px rgba(217, 83, 79, 1);
+    transform: scale(1.03);
+  }
+}
+
+#unitButtons button.selected-unit {
+  background-color: #d1e0ff;
+  color: #003366;
+  font-weight: bold;
+  border: 2px solid #003366;
+  box-shadow: 0 0 8px rgba(0, 51, 102, 0.3);
+}
+
+#drug button.selected-drug {
+  background-color: #d6ffe0;
+  color: #145c1f;
+  font-weight: bold;
+  border: 2px solid #145c1f;
+  box-shadow: 0 0 8px rgba(20, 92, 31, 0.3);
 }

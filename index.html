@@ -10,23 +10,27 @@
   <body>
     <div>
       <div id="info">
-        <div id="pounds">
-          <label for="pounds">How Many Pounds Does The Bunny Weigh?</label>
-          <input type="number" name="pounds" />
+        <label for="weightInput">How much does your bunny weigh?</label>
+        <input type="number" id="weightInput" name="weight" autofocus />
+
+        <div id="unitButtons">
+          <button id="poundsBtn">Use Pounds</button>
+          <button id="kgBtn">Use Kilograms</button>
         </div>
       </div>
+
       <hr />
-      <div id="d">
-        <div id="drug">
-          <button id="meloxicam" onclick="calcMeloxicam()">Meloxicam</button>
-          <button id="metoclopramide" onclick="calcMetoclopramide()">
-            Metoclopramide
-          </button>
-          <button id="cisapride" onclick="calcCisapride()">Cisapride</button>
-          <button id="cisapride" onclick="calcGabapentin()">Gabapentin</button>
-        </div>
+
+      <div id="drug">
+        <button id="meloxicam" onclick="calcMeloxicam()" disabled>Meloxicam</button>
+        <button id="metoclopramide" onclick="calcMetoclopramide()" disabled>Metoclopramide</button>
+        <button id="cisapride" onclick="calcCisapride()" disabled>Cisapride</button>
+        <button id="gabapentin" onclick="calcGabapentin()" disabled>Gabapentin</button>
+        <button id="fluids" onclick="calcFluids()" disabled>Fluids</button>
       </div>
+
       <hr />
+
       <div id="result">
         <div id="weight"></div>
         <hr />
@@ -35,6 +39,10 @@
         <div id="dosage"></div>
       </div>
     </div>
+    <div id="resetSection">
+      <button id="resetBtn" onclick="resetForm()" style="display: none;">Reset</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
