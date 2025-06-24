@@ -17,9 +17,19 @@ So I built this app — a lightweight calculator to simplify one of the most str
 
 ## Features
 
-- Enter rabbit weight in **pounds**
-- See safe dosage ranges for popular rabbit medications
+- Enter rabbit weight in **pounds** or **kilograms**
+- Choose the unit with a single tap — the selection stays highlighted
+- Automatically focuses the weight input on page load so you can just start typing
+- Calculates dosages for:
+  - **Meloxicam**
+  - **Metoclopramide**
+  - **Cisapride**
+  - **Gabapentin**
+  - **Fluids (45 ml/kg)**
+- Clearly shows drug concentrations and recommended dose ranges
+- Locks the interface after a calculation to avoid mistakes — one clear **Reset** button appears
 - Built for mobile and web — usable right at the rescue site or vet
+- No internet required once loaded (works offline in most browsers)
 
 ---
 
