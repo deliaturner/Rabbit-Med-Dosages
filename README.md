@@ -7,7 +7,7 @@ _A simple calculator to determine safe medication dosages for rabbits based on t
 
 ## About the Project
 
-This tool was built for my friend **Julia**, who devotes her life to rescuing rabbits — including abused pets, abandoned outdoor strays, and animals in critical need of care. She’s one of those people who puts everyone else (including rabbits) first.
+This tool was built for my friend **Julia**, who devotes her life to rescuing rabbits — including abused pets, abandoned outdoor strays, and animals in critical need of care. She’s one of those people who puts everybunny else first.
 
 She said, "I hate math." I wanted to help.
 
